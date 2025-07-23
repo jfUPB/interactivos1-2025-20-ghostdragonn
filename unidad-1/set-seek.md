@@ -102,12 +102,25 @@ function draw() {
   
   fill ('#E4FCFF80');
    circle(random(50,350), random(25,300), random(40,7))
+  
   fill ('#C3F8FF80');
   
-  circle (random(1,400),random(1,400),random(1,30))
+  circle (random(50,350),random(25,300),random(1,30))
   
- fill ('#EEDEC2');
-  rect(0, 350, 400, 300);
+
+  noStroke();
+  fill('#EEDEC2'); // color arena
+
+  beginShape();
+  vertex(0, 300); // punto inicial
+  for (let x = 0; x <= width; x += 10) {
+    let y = 300 + sin(x * 0.05) * 10; // forma ondulada
+    vertex(x, y);
+  }
+  vertex(width, height);
+  vertex(0, height);
+  endShape(CLOSE);
+
   
   
  let baseX = width / 1.22;
@@ -302,4 +315,5 @@ function draw() {
   circle(265,115,10)
 
 }
+
 ```
