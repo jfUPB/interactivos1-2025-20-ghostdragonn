@@ -19,7 +19,7 @@
 
 ### 3). ¿Cuál es la función de la línea uart.write('A') en el código del micro:bit y qué función en p5.js se encarga de “escuchar” ese mensaje?
 
-**R/** Su funcion es que cuando se presione el boton a, se mande la senal al codigo de p5js, en donde por medio del for 
+**R/** No me acuerdo
 
 ### 4). ¿Cuál es la diferencia fundamental entre el arte/diseño tradicional y el arte/diseño generativo?
 
