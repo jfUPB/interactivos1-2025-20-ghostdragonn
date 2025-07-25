@@ -44,7 +44,7 @@ El programa en java script del editor y el programa en python
 
 ## Código:
 
-```
+``` js
 function setup() {
   createCanvas(400, 400);
 }
