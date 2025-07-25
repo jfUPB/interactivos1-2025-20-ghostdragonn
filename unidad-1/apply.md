@@ -2,14 +2,14 @@
 
 ## 🛠 Fase: Apply
 
-## Actividad 05:
+### Actividad 05:
 Este sistema fisico interactivo esta conectado a la microbit mediante el serial, que al iniciar crea un a interfaz grafica sencilla: un lienzo y boton para desconectar y conectar la microbit. Una vez conectada, el programa revisa constantemente si hay datos disponibles enviados desde la microbit. Si recibe la letra "A", cambia el color de un rectángulo al centro de la pantalla a rojo; si recibe "N", lo cambia a verde.
 
-# Actividad 06:
+### Actividad 06:
 
 [El enlace a mi programa en python](https://python.microbit.org/v/3)
 
-```
+``` py
 # Imports go at the top
 from microbit import *
 
@@ -27,7 +27,7 @@ while True:
 
 [El enlace a mi programa en p5js](https://editor.p5js.org/ghostdragonn/sketches/NzqqO_Ttzi)
 
-```
+``` js
 let port;
   let connectBtn;
   let connectionInitialized = false;
