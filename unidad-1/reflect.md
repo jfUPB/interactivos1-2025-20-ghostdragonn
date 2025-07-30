@@ -31,7 +31,7 @@
 
 ### Parte 2: reflexión sobre tu proceso (Metacognición)
 
-### 1). ¿Qué fue más desafiante para ti en esta unidad: la parte conceptual (entender qué es un sistema físico interactivo) o la parte técnica (hacer que el micro:bit y p5.js se comunicaran)? ¿Por qué?
+**1). ¿Qué fue más desafiante para ti en esta unidad: la parte conceptual (entender qué es un sistema físico interactivo) o la parte técnica (hacer que el micro:bit y p5.js se comunicaran)? ¿Por qué?**
 
 **R/** La parte tecnica, ya que se me dificulta entender el codigo, de a poquitos he ido entendiendo mas y mas, pero igual todavia se me cuesta.
 
@@ -63,9 +63,9 @@ De su solucion aprendi sobre la variable dir y su funcionamiento, y que hubira s
 
 Responde a las siguientes preguntas. Tu honestidad es el recurso más valioso para la mejora del curso.
 
-### **Continuar:** ¿Qué actividad, video o ejemplo de esta unidad te resultó más inspirador o te ayudó más a entender el potencial de los sistemas físicos interactivos?
+**Continuar:** ¿Qué actividad, video o ejemplo de esta unidad te resultó más inspirador o te ayudó más a entender el potencial de los sistemas físicos interactivos?
 
-### **R/** Exploraar todas las diferentes funciones que tiene p5js para crear arte generativo, me parecio muy chevere y se me hizo mas facil de entender que las otras actividades
+**R/** Exploraar todas las diferentes funciones que tiene p5js para crear arte generativo, me parecio muy chevere y se me hizo mas facil de entender que las otras actividades
 
 **Dejar de hacer:** ¿Hubo alguna parte que te pareció demasiado abstracta, muy rápida o confusa? ¿Hay algo que crees que podríamos cambiar para que sea más claro?
 
