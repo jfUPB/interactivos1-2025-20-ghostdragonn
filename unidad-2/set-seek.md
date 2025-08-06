@@ -9,7 +9,7 @@
 
 **¿Cuáles son los estados en el programa?**
 
-**R/** 	"Init" y "WaitTimeout"
+**R/** 	"WaitTimeout"
 
 **¿Cuáles son los eventos/inputs en el programa?**
 
@@ -103,16 +103,51 @@ Paso del tiempo de un color a otro
 ### Actividad 03
 **Explica por qué decimos que este programa permite realizar de manera concurrente varias tareas.**
 
-**R/** Por que escribimos el codigo de las tareas de tal manera que no bloquee la CPU
+**R/** Por que escribimos el codigo de las tareas de tal manera que no bloquee la CPU.
 
 **Identifica los estados, eventos y acciones en el programa.**
 
-**Describe y aplica al menos 3 vectores de prueba para el programa. Para definir un vector de prueba debes llevar al sistema a un estado, generar los eventos y observar el estado siguiente y las acciones que ocurrirán. Por tanto, un vector de prueba tiene unas condiciones iniciales del sistema, unos resultados esperados y los resultados realmente obtenidos. Si el resultado obtenido es igual al esperado entonces el sistema pasó el vector de prueba, de lo contrario el sistema puede tener un error.**
+**R/** 
+**Estados:**
+- STATE_HAPPY.
+- STATE_HAPPY: espera botón o tiempo para cambiar.
+- STATE_SMILE: espera botón o tiempo para cambiar.
 
-Nota para miercoles ya debe estar setseek
-para viernes apply
+**Eventos:**
+- Botón A presionado: button_a.was_pressed().
+- Tiempo transcurrido: utime.ticks_diff(...) > interval.
 
+**Acciones:**
+- Mostrar una imagen (display.show(...)).
+- Guardar el tiempo inicial (start_time = utime.ticks_ms()).
+- Establecer el nuevo intervalo de duración del estado.
+- Cambiar el estado (current_state = ...).
+- STATE_SAD: espera botón o tiempo para cambiar.
 
+**3. Describe y aplica al menos 3 vectores de prueba para el programa. Para definir un vector de prueba debes llevar al sistema a un estado, generar los eventos y observar el estado siguiente y las acciones que ocurrirán. Por tanto, un vector de prueba tiene unas condiciones iniciales del sistema, unos resultados esperados y los resultados realmente obtenidos. Si el resultado obtenido es igual al esperado entonces el sistema pasó el vector de prueba, de lo contrario el sistema puede tener un error.**
 
+**Vector de prueba 1: Transición por tiempo desde INIT a SMILE**
+
+- **Condiciones iniciales**: El sistema inicia en STATE_INIT.  
+- **Evento**: No se presiona ningún botón. Se deja correr el programa.  
+- **Resultado esperado**: El sistema entra en STATE_HAPPY mostrando una imagen de cara feliz.
+Después de 1500 ms sin presionar botón, cambia a STATE_SMILE mostrando una imagen sonriente.
+- **Resultado obtenido**: Funciona como se esperaba.
+
+**Vector de prueba 2: Transición de HAPPY a SAD por botón**
+
+- **Condiciones iniciales**: El sistema está en STATE_HAPPY.
+- **Evento**: El usuario presiona el botón A antes de que pasen los 1500 ms.
+- **Resultado esperado**: El sistema muestra una imagen triste.
+Cambia a STATE_SAD y reinicia el contador de tiempo.
+- **Resultado obtenido**: Funciona como se esperaba.
+
+**Vector de prueba 3: Transición de SMILE a SAD por tiempo, y de SAD a HAPPY por botón**
+
+- **Condiciones iniciales**: El sistema se encuentra en STATE_SMILE.
+- **Evento**: No se presiona el botón. Luego, estando en STATE_SAD, se presiona el botón A.
+- **Resultado esperado**: Después de 1000 ms, el sistema cambia a STATE_SAD y muestra una imagen triste.
+Al presionar el botón A, pasa a STATE_SMILE.
+- **Resultado obtenido**: Funciona como se esperaba.
 
 
